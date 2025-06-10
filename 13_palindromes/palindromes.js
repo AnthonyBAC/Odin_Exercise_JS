@@ -1,9 +1,11 @@
 const palindromes = function (word) {
-    word = word.toLowerCase()
-    let word_reverse = word.split("").reverse().join("")
-    let simbols_clean =  word_reverse.toLowerCase().replace(/[^a-z0-9]/g, "");
 
-    if (simbols_clean === word){
+
+    let simbols_clean =  word.toLowerCase().replace(/[^a-z0-9]/g, "");
+    let word_reverse = simbols_clean.split("").reverse().join("")
+   
+
+    if (word_reverse === simbols_clean){
         return true
     }else{
         return false
@@ -12,7 +14,7 @@ const palindromes = function (word) {
 
 };
 
-console.log(palindromes("Racecar"))
+console.log(palindromes("Racecar!"))
 
 // Do not edit below this line
 module.exports = palindromes;
